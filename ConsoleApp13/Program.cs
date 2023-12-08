@@ -25,24 +25,21 @@ namespace ConsoleApp13;
             }
 
             int[,] matrix = new int[lines, columns];
-            Random random = new Random();
-
-            // Заполнение матрицы случайными числами и вывод на экран
-            Console.WriteLine("Сгенерированная матрица:");
+            Random random = new Random()
+             
+            Console.WriteLine("Сгенерированная матрица:"); 
             int sum = 0;
-            for (int i = 0; i < lines; i++)
+            for (int i = 0; i < lines; i++) // Заполнение матрицы
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    matrix[i, j] = random.Next(1, 100); // Генерация случайного числа от 1 до 100
+                    matrix[i, j] = random.Next(1, 100); 
                     Console.Write(matrix[i, j] + " ");
                     sum += matrix[i, j];
                 }
                 Console.WriteLine();
             }
-
-            // Вывод суммы всех элементов матрицы
-            Console.WriteLine($"Сумма всех элементов матрицы: {sum}");
+            Console.WriteLine($"Сумма всех элементов матрицы: {sum}");  // Вывод суммы всех элементов 
         }
     }
 
